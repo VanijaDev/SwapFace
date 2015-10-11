@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwapFaces" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yrI-1h-N35">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="m5l-z5-AFw">
+                                <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                                <animations/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXu-jM-Yl3">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Select image"/>
+                                <connections>
+                                    <action selector="selectImageBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PTO-zR-c5S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKx-gi-sLt">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Swap faces"/>
+                                <connections>
+                                    <action selector="swapFacesBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GKw-lM-i1f"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yrI-1h-N35" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CgA-jR-LA0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AXu-jM-Yl3" secondAttribute="bottom" constant="20" id="HfL-fv-fcl"/>
+                            <constraint firstAttribute="trailing" secondItem="yrI-1h-N35" secondAttribute="trailing" id="NRc-UW-hbU"/>
+                            <constraint firstItem="EKx-gi-sLt" firstAttribute="centerY" secondItem="AXu-jM-Yl3" secondAttribute="centerY" id="PuK-dn-KF2"/>
+                            <constraint firstItem="m5l-z5-AFw" firstAttribute="centerX" secondItem="yrI-1h-N35" secondAttribute="centerX" id="cfo-je-ODG"/>
+                            <constraint firstItem="AXu-jM-Yl3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jcH-AP-4e3"/>
+                            <constraint firstItem="yrI-1h-N35" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lgS-Y5-ROc"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="yrI-1h-N35" secondAttribute="bottom" constant="58" id="q03-rH-rBB"/>
+                            <constraint firstItem="m5l-z5-AFw" firstAttribute="centerY" secondItem="yrI-1h-N35" secondAttribute="centerY" id="rqL-V0-Sbf"/>
+                            <constraint firstItem="EKx-gi-sLt" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="upv-Q4-dhd"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="yrI-1h-N35"/>
+                                <exclude reference="m5l-z5-AFw"/>
+                                <exclude reference="AXu-jM-Yl3"/>
+                                <exclude reference="EKx-gi-sLt"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="CgA-jR-LA0"/>
+                                <exclude reference="NRc-UW-hbU"/>
+                                <exclude reference="lgS-Y5-ROc"/>
+                                <exclude reference="q03-rH-rBB"/>
+                                <exclude reference="cfo-je-ODG"/>
+                                <exclude reference="rqL-V0-Sbf"/>
+                                <exclude reference="jcH-AP-4e3"/>
+                                <exclude reference="HfL-fv-fcl"/>
+                                <exclude reference="PuK-dn-KF2"/>
+                                <exclude reference="upv-Q4-dhd"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="yrI-1h-N35"/>
+                                <include reference="m5l-z5-AFw"/>
+                                <include reference="AXu-jM-Yl3"/>
+                                <include reference="EKx-gi-sLt"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="CgA-jR-LA0"/>
+                                <include reference="NRc-UW-hbU"/>
+                                <include reference="lgS-Y5-ROc"/>
+                                <include reference="q03-rH-rBB"/>
+                                <include reference="cfo-je-ODG"/>
+                                <include reference="rqL-V0-Sbf"/>
+                                <include reference="jcH-AP-4e3"/>
+                                <include reference="HfL-fv-fcl"/>
+                                <include reference="PuK-dn-KF2"/>
+                                <include reference="upv-Q4-dhd"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="m5l-z5-AFw" id="IUB-LC-bxF"/>
+                        <outlet property="imageV" destination="yrI-1h-N35" id="ruB-ln-Q1o"/>
+                        <outlet property="swapFacesBtn" destination="EKx-gi-sLt" id="Cgt-h6-SVG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="279.75" y="256.875"/>
+        </scene>
+    </scenes>
+</document>
